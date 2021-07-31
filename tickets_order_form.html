@@ -1,0 +1,141 @@
+	<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>Event Tickets Order Form</title>
+		<link rel="stylesheet" type="text/css" href="styles/normalize.css">
+		<link rel="stylesheet" type="text/css" href="styles/main.css">		
+	</head>
+
+	<body>
+		<div id="frame">
+			<header>
+				<img src="images/ornament-logo.png" alt="New Year Central Logo" style="width: 400px;">
+				<div id="header-line-1">New Year Central</div>
+				<div id="header-line-2">For the child in all of us!</div>
+			</header>
+
+			<!-- navigation starts -->
+			<nav id="nav_menu">
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="about_us.html">About Us</a></li>
+					<li><a href="products.html">Our Products</a></li>
+					<li><a href="tickets_order_form.html" class="current">Event Tickets</a></li>
+					<li><a href="contact_us.html">Contact Us</a></li>
+				</ul>
+			</nav>
+
+			<aside>
+				<div class="sidebar-title">Products of The Week...</div>
+				<ul>
+					<li><a href="assets/products/berry-garland.html">Natural Holly Berry Garland, 5f - $74.99</a></li>
+					<li><a href="assets/products/artificial-red-berry-garland.html">Artificial Red Berry and White Edge Holly Leaf Christmas Garland, 5.5f - $38.99</a></li>
+					<li><a href="assets/products/christmas-berries-stems.html">Christmas Berries Red Stems Evergreen Pine Branches, 8pcs - $15.99</a></li>
+				</ul>
+			</aside>
+			
+			<main>
+				<h1>Order Event Tickets</h1>
+				<!-- The form starts here... -->
+
+				<form name="order_form" method="post" action="place_order.html">
+					<fieldset>
+						<legend>Member Information</legend>
+						<table>
+
+							<tr><td class="label">E-Mail:</td><td class="field"><input required type="email" name="email" autofocus></td></tr>
+							<tr><td class="label">First Name:</td><td class="field"><input required type="text" name="first_name"></td></tr>
+							<tr><td class="label">Last Name:</td><td class="field"><input required type="text" name="last_name"></td></tr>
+							<tr><td class="label">Address:</td><td class="field"><input  type="text" name="address"></td></tr>
+							<tr><td class="label">City:</td><td class="field"><input required type="text" name="city"></td></tr>
+							<tr><td class="label">Province:</td><td class="field"><input placeholder="2-character code" pattern="[a-zA-Z]{2}" required type="text" name="province"></td></tr>
+							<tr><td class="label" >Postal Code:</td><td class="field"><input placeholder="6 characters" pattern="[a-zA-Z0-9]{6}" required type="text" name="postal_code"></td></tr>
+							<tr><td class="label">Phone Number:</td><td class="field"><input placeholder="999-999-9999" pattern="\d{3}-\d{3}-\d{4}"  type="text" name="phone_number"></td></tr>
+						</table>
+					</fieldset>
+
+					<fieldset>
+						<legend>Ordering Information</legend>
+						<table>
+							<tr><td class="label">Event:</td><td class="field">
+								<select required name="event">
+									<option value="Cookie Decoration Contest">Cookie Decoration Contest</option>
+									<option value="Tree Decoration Contest">Tree Decoration Contest</option>
+									<option value="Gift of Light Ride-Along">Gift of Light Ride-Along</option>
+									<option value="Breakfast with Santa">Breakfast with Santa</option>
+								</select>
+							</td></tr>
+							<tr><td class="label">Order Type:</td><td class="field">
+								<select required name="order_type">
+									<option value="Member Package">Member Package</option>
+									<option value="Donor Package">Donor Package</option>
+									<option value="Single Tickets">Single Tickets</option>
+								</select>
+							</td></tr>
+							<tr><td class="label">Number of Tickets:</td><td class="field">
+								<input placeholder="number of single tickets"  type="number" name="tickets"></td></tr>
+
+						</table>
+					</fieldset>
+					<fieldset>
+						<legend>Payment Method</legend>
+						<input type="radio" name="payment_method" id="bill"> <label for="bill">Bill Me</label>
+						<input type="radio" name="payment_method" id="card"> <label for="card">Credit Card</label>
+					</fieldset>
+					<fieldset>
+						<legend>Credit Card Information</legend>
+						<table>
+							<tr><td class="label">Card Type:</td><td class="field">
+								<select required name="order_type">
+									<option value="Visa">Visa</option>
+									<option value="Master Card">Master Card</option>
+									<option value="Discover">Discover</option>
+								</select>
+							</tr>
+							<tr><td class="label">Card Number:</td><td class="field"><input placeholder="16 digits" pattern="\d{16}" required type="number" name="card_number"></td></tr>
+							<tr><td class="label">Expiration Date:</td><td class="field">
+								<select required id="month">
+									<option>January</option>
+									<option>February</option>
+									<option>March</option>
+									<option>April</option>
+									<option>May</option>
+									<option>June</option>
+									<option>July</option>
+									<option>August</option>
+									<option>September</option>
+									<option>October</option>
+									<option>November</option>
+									<option>December</option>
+								</select>
+								<select required id="year">
+									<option>2021</option>
+									<option>2022</option>
+									<option>2023</option>
+									<option>2024</option>
+									<option>2025</option>
+									<option>2026</option>
+									<option>2027</option>
+								</select>
+							</td></tr>
+
+						</table>
+					</fieldset>
+					<fieldset>
+						<legend>Submit Your Order</legend>
+						<div class="buttons">
+							<button type="submit">Submit</button>
+							<button input="reset">>Reset Fields</button>
+						</div>
+					</fieldset>
+				</form>
+				
+			</main>
+			
+			<footer>
+				<p>&copy; 2021 New Year Central. Created by Johnny White.</p>
+			</footer>
+		</div>
+	</body>
+</html>
